@@ -118,7 +118,7 @@ class enemy(object):
             pygame.draw.rect(win, (255,0,0), (self.hitbox[0], self.hitbox[1] - 20,  50, 10))
             pygame.draw.rect(win, (0,128,0), (self.hitbox[0], self.hitbox[1] - 20, 50 - (5 * (10 - self.health)), 10))
 
-            self.hitbox = (self.x + 17, self.y + 2, 31,57)
+            self.hitbox = (self.x + 17, self.y + 2, 31, 57)
             # pygame.draw.rect(win, (255, 0, 0), self.hitbox, 2)
 
     def move(self):
@@ -159,7 +159,7 @@ def redrawGameWindow():
 #mainloop
 font = pygame.font.SysFont('comicsans', 30, True)
 man = player(200, 410, 64, 64)
-goblin = enemy(100, 410, 64, 64, 50)
+goblin = enemy(100, 410, 64, 64, 300)
 shootLoop = 0
 bullets = []
 run=True
