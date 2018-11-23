@@ -165,27 +165,31 @@ def redrawGameWindow():
         gover = go_font.render('YOU LOSE', 1, (255,0,0))
         screen.blit(gover, (226, 140))
         i = 0
-        while i < 200:
+        while i < 2000:
+            pygame.display.update()
             pygame.time.delay(1)
             i += 1
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    i = 201
+                    i = 2001
                     pygame.quit()
+        pygame.quit()
   
     if not(you.visible):
         cl_font = pygame.font.SysFont(None, 100)
         gcle = cl_font.render('YOU WIN', 1, (0,128,0))
         screen.blit(gcle, (226, 140))
         i = 0
-        while i < 200:
+        while i < 2000:
+            pygame.display.update()
             pygame.time.delay(1)
             i += 1
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    i = 201
+                    i = 2001
                     pygame.quit()
-    
+        pygame.quit()
+
     pygame.display.update()
     # dirty_rects = group.draw(screen)
     # pygame.display.update(dirty_rects)
